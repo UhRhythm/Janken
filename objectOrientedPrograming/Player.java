@@ -1,5 +1,43 @@
 package objectOrientedPrograming;
 
 public class Player {
+    final int STONE = 0;
+    final int SCISSORS = 1;
+    final int PAPER = 2;
+
+    private String name_;
+
+    private int winCount_;
     
+    public Player(String name) {
+        this.name_ = name;
+    }
+
+    public int showhand() 
+    {   
+        double randomNum = Math.random() * 3;
+        int playerhand = 0;
+        if(randomNum < 1) {
+            playerhand = STONE;
+        } else if (randomNum < 2) {
+            playerhand = SCISSORS;
+        } else if (randomNum < 3) {
+            playerhand = PAPER;
+        }
+        return playerhand;
+    }
+
+    public void notiFyResult(boolean result) {
+        if(result) {
+            winCount_++;
+        }
+    }
+    public int getWinCount() {
+        return winCount_;
+    }
+
+    public String getName() {
+        return name_;
+    }
+
 }
