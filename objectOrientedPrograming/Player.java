@@ -1,9 +1,9 @@
 package objectOrientedPrograming;
 
 public class Player {
-    final int STONE = 0;
-    final int SCISSORS = 1;
-    final int PAPER = 2;
+    public static final int STONE = 0;
+    public static final int SCISSORS = 1;
+    public static final int PAPER = 2;
 
     private String name_;
 
@@ -39,5 +39,6 @@ public class Player {
     public String getName() {
         return name_;
     }
-
 }
+
+// Player person1 = new Player("レンタルぶさいく");
