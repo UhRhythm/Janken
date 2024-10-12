@@ -60,11 +60,11 @@ public class Judge {
 
     private Player finalJudgeWinner(Player player1, Player player2) {
         int player1WinCount = player1.getWinCount();
-        int playe2WinCount = player2.getWinCount();
+        int player2WinCount = player2.getWinCount();
         Player winner = null;
-        if(player1WinCount > playe2WinCount) {
+        if(player1WinCount > player2WinCount) {
             winner = player1;
-        } else {
+        } else if (player2WinCount > player1WinCount) {
             winner = player2;
         }
         return winner;

@@ -8,6 +8,8 @@ public class Player {
     private String name_;
 
     private int winCount_;
+
+    private Tactics tactics_;
     
     public Player(String name) {
         this.name_ = name;
@@ -15,15 +17,16 @@ public class Player {
 
     public int showhand() 
     {   
-        double randomNum = Math.random() * 3;
-        int playerhand = 0;
-        if(randomNum < 1) {
-            playerhand = STONE;
-        } else if (randomNum < 2) {
-            playerhand = SCISSORS;
-        } else if (randomNum < 3) {
-            playerhand = PAPER;
-        }
+        // double randomNum = Math.random() * 3;
+        // int playerhand = 0;
+        // if(randomNum < 1) {
+        //     playerhand = STONE;
+        // } else if (randomNum < 2) {
+        //     playerhand = SCISSORS;
+        // } else if (randomNum < 3) {
+        //     playerhand = PAPER;
+        // }
+        int playerhand = tactics_.readTactics();
         return playerhand;
     }
 
@@ -38,6 +41,9 @@ public class Player {
 
     public String getName() {
         return name_;
+    }
+    public void setTactics(Tactics tactics) {
+        tactics_ = tactics;
     }
 }
 

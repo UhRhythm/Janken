@@ -1,9 +1,13 @@
 package objectOrientedPrograming;
 public class ObjectJanken {
     public static void main(String[] args) {
-        Player player1 = new Player("村田");
-        Player player2 = new Player("土岡");
+        Player murata = new Murata("村田");
+        Tactics murataTactics = new RandomTactics();
+        murata.setTactics(murataTactics);
+        Player yamada = new Yamada("山田");
+        Tactics yamadaTactics = new RandomTactics();
+        yamada.setTactics(yamadaTactics);
         Judge refree = new Judge();
-        refree.startJanken(player1, player2);
+        refree.startJanken(murata, yamada);
     }
 }
